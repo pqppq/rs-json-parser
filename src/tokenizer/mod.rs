@@ -23,6 +23,16 @@ pub struct Number {
     exponent: Option<i32>,
 }
 
+impl Number {
+    pub fn new(int: i32, frac: Option<f32>, exponent: Option<i32>) -> Self {
+        Self {
+            int,
+            frac,
+            exponent,
+        }
+    }
+}
+
 impl Display for Number {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let Number {
